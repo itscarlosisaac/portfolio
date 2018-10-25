@@ -6,14 +6,13 @@ import PersonalProjectsSection from '../sections/PersonalProjectsSection';
 import CompaniesSection from '../sections/CompaniesSection';
 import FooterSection from '../sections/FooterSection';
 
-
 export default () => (
   <Fragment>
-    <HeaderSection/>
-    <SkillsSection/>
-    <PortfolioSection/>
-    <PersonalProjectsSection/>
-    <CompaniesSection/>
-    <FooterSection/>
+    <HeaderSection />
+    <SkillsSection />
+    <PortfolioSection />
+    <PersonalProjectsSection />
+    <CompaniesSection title="Companies I’ve collaborated with:" />
+    <FooterSection />
   </Fragment>
 );
