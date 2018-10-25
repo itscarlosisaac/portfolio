@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles used in each section of the website
+// -----------------------------------------------------------------------------
+
+.app__container {
+  margin: 0 auto;
+  max-width: map-get($breakpoints, 'desktop');
+  padding: 0 20px;
+}

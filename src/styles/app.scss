@@ -1,25 +1,13 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+// 1. Configuration and helpers
+@import 'settings/variables';
 
-.app__container {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+// 2. Base imports
+@import 'base/base',
+        'base/fonts',
+        'base/typography';
 
-  header {
-    background: #222222;
-    padding: 20px 0 40px;
+// 3. Layout
+@import 'layout/sections';
 
-    h1 {
-      color: #ffffff;
-    }
-  }
-
-  p {
-    code {
-      color: #8d8d8d;
-    }
-  }
-}
+//  4. Components
+@import 'components/company'
