@@ -1,0 +1,142 @@
+.personal__projects {
+  margin: 50px 0 100px;
+
+  .project__item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 50px 20px;
+
+    &__image {
+      border-radius: 1000px;
+      display: block;
+      height: 110px;
+      margin-right: 30px;
+      overflow: hidden;
+      width: 110px;
+    }
+
+    &__content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      max-width: 580px;
+    }
+
+    &__description {
+      max-width: calc(100% - 140px);
+
+      h3 {
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 0.37px;
+        margin: 0 0 20px;
+      }
+
+      p {
+        font-size: 16px;
+        letter-spacing: 0.34px;
+        line-height: 23px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__cta {
+      background: #ffffff;
+      border-radius: 1000px;
+      color: #393c57;
+      font-size: 13px;
+      font-weight: 700;
+      height: 48px;
+      letter-spacing: 0.29px;
+      line-height: 48px;
+      text-align: center;
+      width: 160px;
+    }
+
+    &--purple {
+      background-color: $brand-purple;
+
+      .project__item {
+        &__content {
+          p,
+          h3 {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    &--yellow {
+      background-color: $brand-light-yellow;
+
+      .project__item {
+        &__content {
+          h3 {
+            color: #4c3d23;
+          }
+
+          p {
+            color: #343a4c;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .personal__projects {
+    .project__item {
+      flex-direction: column;
+
+      &__image {
+        border-radius: 1000px;
+        display: block;
+        height: 110px;
+        margin-right: 30px;
+        overflow: hidden;
+        width: 110px;
+      }
+
+      &__cta {
+        align-self: flex-start;
+        margin-left: calc(((100vw - 580px ) / 2 ) + 120px);
+      }
+
+      &__content {
+        align-items: flex-start;
+        margin-bottom: 30px;
+      }
+
+      &__description {
+        max-width: calc(100% - 140px);
+
+        h3 {
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .personal__projects {
+    .project__item {
+      &__image {
+        height: 60px;
+        width: 60px;
+      }
+
+      &__description {
+        max-width: calc(100% - 90px);
+      }
+
+      &__cta {
+        margin-left: 90px;
+      }
+    }
+  }
+}
