@@ -11,14 +11,14 @@ const PersonalProjectsSection = (props) => {
       </header>
       <div className="personal__projects">
         <ProjectItem
-          type="purple"
+          type="yellow"
           image="http://mattfarley.ca/img/mf-avatar.svg"
           title="Catan Random Board Generator"
           description="Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button."
           link="http://bradfrost.com/blog/post/atomic-web-design/"
         />
         <ProjectItem
-          type="yellow"
+          type="purple"
           image="http://mattfarley.ca/img/mf-avatar.svg"
           title="Catan Random Board Generator"
           description="Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button."

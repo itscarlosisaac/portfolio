@@ -10,7 +10,7 @@ export default () => (
   <Fragment>
     <HeaderSection />
     <SkillsSection />
-    <PortfolioSection />
+    <PortfolioSection title="Porfolio" />
     <PersonalProjectsSection title="Personal Projects" />
     <CompaniesSection title="Companies I’ve collaborated with:" />
     <FooterSection />
