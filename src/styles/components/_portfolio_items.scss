@@ -19,10 +19,9 @@
     width: 290px;
 
     &__hover {
-      background: #ff0000;
       height: 100%;
       left: 0;
-      opacity: 0.6;
+      opacity: 0.7;
       position: absolute;
       top: 140%;
       transform: skewY(20deg);
@@ -30,6 +29,23 @@
       width: 100%;
       z-index: 5;
     }
+
+    &--light-blue {
+      .portfolio__item__hover { background-color: $extra-blue; }
+    }
+
+    &--brand-blue {
+      .portfolio__item__hover { background-color: $brand-blue; }
+    }
+
+    &--brand-purple {
+      .portfolio__item__hover { background-color: $brand-purple; }
+    }
+
+    &--brand-orange {
+      .portfolio__item__hover { background-color: $brand-orange; }
+    }
+
 
     &:hover {
       .portfolio__item__hover {
@@ -74,7 +90,7 @@
         font-size: 14px;
         font-style: italic;
         transform: translateY(80px);
-        transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.2s, opacity 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.2s;
       }
 
       a {
@@ -84,7 +100,7 @@
         padding: 0 2px 2px;
         text-transform: lowercase;
         transform: translateY(80px);
-        transition: color 0.4s ease-in, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.2s, opacity 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        transition: color 0.4s ease-in, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.2s;
       }
     }
   }

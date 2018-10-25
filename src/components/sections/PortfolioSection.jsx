@@ -11,6 +11,7 @@ const PortfolioSection = (props) => {
       </header>
       <div className="portfolio__items">
         <PortfolioItem
+          color="brand-blue"
           type="Landing Page"
           image="http://mattfarley.ca/img/project-userforge.png"
           company="Sitata"
@@ -18,6 +19,7 @@ const PortfolioSection = (props) => {
           link="http://bradfrost.com/blog/post/atomic-web-design/"
         />
         <PortfolioItem
+          color="brand-purple"
           type="Landing Page"
           image="http://mattfarley.ca/img/project-userforge.png"
           company="Sitata"
@@ -25,6 +27,7 @@ const PortfolioSection = (props) => {
           link="http://bradfrost.com/blog/post/atomic-web-design/"
         />
         <PortfolioItem
+          color="brand-orange"
           type="Landing Page"
           image="http://mattfarley.ca/img/project-userforge.png"
           company="Sitata"

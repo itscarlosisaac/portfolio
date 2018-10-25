@@ -8,6 +8,7 @@ const PortfolioItem = (props) => {
     description,
     link,
     type,
+    color,
   } = props;
 
   return (
@@ -15,7 +16,7 @@ const PortfolioItem = (props) => {
       style={{
         backgroundImage: `url(${image})`,
       }}
-      className={`portfolio__item portfolio__item--${type}`}
+      className={`portfolio__item portfolio__item--${color}`}
     >
       <div className="portfolio__item__content">
         <h3>{company}</h3>
@@ -41,8 +42,11 @@ PortfolioItem.propTypes = {
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
-PortfolioItem.defaultProps = { };
+PortfolioItem.defaultProps = {
+  color: 'brand-blue',
+};
 
 export default PortfolioItem;
