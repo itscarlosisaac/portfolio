@@ -5,10 +5,10 @@ import * as routes from './constants/Routes';
 // Importing views
 import HomePage from './components/views/HomePage';
 
-const AppRouter = (props) => {
+const AppRouter = () => {
   return (
     <BrowserRouter>
-      <div className="app__container">
+      <div className="app">
         <Switch>
           <Route exact path={routes.HOME} component={HomePage} />
         </Switch>
