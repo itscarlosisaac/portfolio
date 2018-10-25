@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 const Company = (props) => {
   const { name, imageUrl, link } = props;
   return (
-    <a href={link}>
-      <img src={imageUrl} alt={name} />
-    </a>
+    <div className="app__company">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <img src={imageUrl} alt={name} />
+      </a>
+    </div>
   );
 };
 
