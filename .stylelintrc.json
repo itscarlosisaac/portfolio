@@ -23,11 +23,11 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["px","em", "rem", "%", "deg", "s"],
+    "unit-whitelist": ["px","em", "rem", "%", "deg", "s", "vw"],
     "selector-attribute-quotes": "always",
     "color-hex-case": "lower",
     "color-named": "never",
-    "max-nesting-depth": 2,
+    "max-nesting-depth": 6,
     "number-leading-zero": "always",
     "property-case": "lower",
     "color-hex-length": "long",
