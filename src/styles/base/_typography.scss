@@ -13,8 +13,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.68px;
   margin-left: 30px;
+  padding: 0 20px;
   position: relative;
   z-index: 5;
+
+  &--portfolio {
+    &::after { background-color: $brand-light-yellow; }
+  }
 
   &--projects {
     &::after { background-color: $extra-blue; }
@@ -25,9 +30,9 @@ body {
     content: '';
     display: block;
     height: 8px;
-    left: -10%;
+    left: 0;
     position: absolute;
-    width: calc(100% + 50px);
+    width: 100%;
     z-index: -1;
   }
 }
@@ -37,10 +42,10 @@ body {
   .app__section__title {
     font-size: 20px;
     margin-left: 20px;
+    padding: 0 10px;
 
     &::after {
       height: 6px;
-      width: calc(90% + 50px);
     }
   }
 }
