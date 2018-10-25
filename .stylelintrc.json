@@ -23,7 +23,7 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["px","em", "rem", "%", "deg", "s", "vw"],
+    "unit-whitelist": ["px","em", "rem", "%", "deg", "s", "vw", "vh"],
     "selector-attribute-quotes": "always",
     "color-hex-case": "lower",
     "color-named": "never",

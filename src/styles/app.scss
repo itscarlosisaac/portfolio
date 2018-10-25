@@ -4,15 +4,20 @@
 // 2. Base imports
 @import 'base/base',
   'base/fonts',
+  'base/animations',
   'base/typography';
 
 // 3. Layout
 @import 'layout/sections';
 
 //  4. Components
-@import 'components/company',
-  'components/project_item',
+@import
+  'components/header',
+  'components/navigation',
+  'components/hero',
   'components/portfolio_items',
+  'components/project_item',
+  'components/company',
   'components/_contact_box',
   'components/_footer',
   'components/_copyright';

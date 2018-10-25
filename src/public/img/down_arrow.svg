@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="14px" viewBox="0 0 7 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Desktop-HD" transform="translate(-66.000000, -644.000000)" fill-rule="nonzero" stroke="#4D56A5" stroke-width="1.5">
+            <g id="Hero-Section" transform="translate(57.000000, 18.000000)">
+                <g id="Scroll" transform="translate(5.000000, 580.000000)">
+                    <g id="Arrow" transform="translate(5.000000, 47.000000)">
+                        <path d="M2.5,0.5 L2.5,11.5" id="Line-37"></path>
+                        <path d="M2.5,11.5 L4.08113883,9.91886117" id="Line-38"></path>
+                        <path d="M0.5,11.5 L2.08113883,9.91886117" id="Line-38" transform="translate(1.500000, 10.500000) scale(-1, 1) translate(-1.500000, -10.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

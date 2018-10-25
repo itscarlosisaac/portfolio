@@ -1,0 +1,55 @@
+.app__navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -70px;
+  position: relative;
+  width: 80px;
+
+  .app__menu {
+    display: none;
+  }
+
+  .app__nav {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    .app__action__menu {
+      color: #000000;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.29px;
+      order: 1;
+      transform: rotate(-90deg);
+    }
+
+    .app__icon__menu {
+      order: 2;
+    }
+  }
+
+  .app__scroll__message {
+    animation: ScrollUpDown 1.5s alternate infinite;
+    animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+
+    p {
+      color: $brand-purple;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.34px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      transform: rotate(-90deg);
+    }
+  }
+}

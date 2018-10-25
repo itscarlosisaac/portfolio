@@ -1,0 +1,16 @@
+.app__header {
+  display: flex;
+  padding: 85px 85px 85px 0;
+}
+
+@media #{$medium} {
+  .app__header {
+    padding: 45px;
+  }
+}
+
+@media #{$small} {
+  .app__header {
+    padding: 10px;
+  }
+}
