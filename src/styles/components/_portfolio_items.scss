@@ -46,21 +46,6 @@
       .portfolio__item__hover { background-color: $brand-orange; }
     }
 
-
-    &:hover {
-      .portfolio__item__hover {
-        top: 0;
-        transform: skewY(0deg);
-      }
-
-      h3,
-      small,
-      p,
-      a {
-        transform: translateY(0);
-      }
-    }
-
     &__content {
       position: relative;
       z-index: 10;
@@ -101,6 +86,20 @@
         text-transform: lowercase;
         transform: translateY(80px);
         transition: color 0.4s ease-in, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.2s;
+      }
+    }
+
+    &:hover {
+      .portfolio__item__hover {
+        top: 0;
+        transform: skewY(0deg);
+      }
+
+      h3,
+      small,
+      p,
+      a {
+        transform: translateY(0);
       }
     }
   }

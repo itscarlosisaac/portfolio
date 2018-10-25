@@ -34,3 +34,9 @@ a {
 img {
   max-width: 100%;
 }
+
+// Remove button's borders
+button {
+  border: none;
+  cursor: pointer;
+}
