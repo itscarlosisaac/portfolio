@@ -23,10 +23,11 @@ $brand-gradient: linear-gradient(-45deg, #f38498 0%, #e9916f 52%, #ffb14f 100%);
 // -----------------------------------------------------------------------------
 
 $breakpoints: ( 'mobile': 375px, 'tablet': 768px, 'desktop': 1440px ) !default;
+
 // -----------------------------------------------------------------------------
 // Media Queries
 // -----------------------------------------------------------------------------
 
 $large: "all and (max-width: 1024px)";
 $medium: "all and (max-width: 800px)";
-$small: "all and (max-width: 600px)";
+$small: "all and (max-width: 620px)";

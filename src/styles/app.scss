@@ -3,11 +3,12 @@
 
 // 2. Base imports
 @import 'base/base',
-        'base/fonts',
-        'base/typography';
+  'base/fonts',
+  'base/typography';
 
 // 3. Layout
 @import 'layout/sections';
 
 //  4. Components
-@import 'components/company'
+@import 'components/company',
+  'components/project_item';
