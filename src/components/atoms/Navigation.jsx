@@ -6,14 +6,14 @@ const Navigation = (props) =>  {
   const arrow = '../../public/img/down_arrow.svg';
   return (
     <div className="app__navigation">
-      <div>
+      <div className="app__logo">
         <a href="l">
           <img width="50" src={logo} alt="Main Logo" />
         </a>
       </div>
       <div className="app__nav">
         <div className="app__icon__menu">
-          <MenuIcon/>
+          <MenuIcon />
         </div>
 
         <div className="app__action__menu">
