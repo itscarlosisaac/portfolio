@@ -1,9 +1,9 @@
 import React from 'react';
-import SocialIcons from './Social';
+import SocialIcons from './SocialIcons';
 
 const Copyright = (props) => {
   const logoUrl = '../../public/img/logo_white.svg';
-  
+
   return (
     <div className="app__container app__copyright">
       <div className="app__fw">

@@ -23,13 +23,6 @@ const Navigation = (props) =>  {
           <span>U</span>
         </div>
       </div>
-      <nav className="app__menu">
-        <ul>
-          <li><a href="a">Portfolio</a></li>
-          <li><a href="a">Personal Projects</a></li>
-          <li><a href="a">Contact</a></li>
-        </ul>
-      </nav>
       <div className="app__scroll__message">
         <p>Scroll</p>
         <img src={arrow} alt="Down Arrow" />

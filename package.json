@@ -1,6 +1,6 @@
 {
   "name": "webpack-boilerplate",
-  "description": "A webpacl boilerplate for many web applications.",
+  "description": "A webpack boilerplate for many web applications.",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Carlos Martinez <itscarlosisaac@gmail.com>",

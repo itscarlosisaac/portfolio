@@ -6,14 +6,6 @@
   margin-top: -60px;
   width: 120px;
 
-  .app__menu {
-    display: none;
-  }
-
-  .app__logo {
-    // align-self: center;
-  }
-
   .app__nav {
     align-items: center;
     cursor: pointer;
@@ -70,6 +62,11 @@
     margin-bottom: 20px;
     width: 100%;
 
+    .app__logo {
+      position: relative;
+      z-index: 50;
+    }
+
     .app__nav {
       .app__action__menu {
         display: none;
@@ -82,8 +79,10 @@
         display: flex;
         height: 45px;
         justify-content: center;
+        position: relative;
         transform: none;
         width: 45px;
+        z-index: 50;
 
         svg {
           stroke: #ffffff;
