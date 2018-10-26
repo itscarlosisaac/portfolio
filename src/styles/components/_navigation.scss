@@ -1,13 +1,17 @@
 .app__navigation {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: -70px;
-  position: relative;
-  width: 80px;
+  margin-top: -60px;
+  width: 120px;
 
   .app__menu {
     display: none;
+  }
+
+  .app__logo {
+    // align-self: center;
   }
 
   .app__nav {
@@ -27,6 +31,14 @@
 
     .app__icon__menu {
       order: 2;
+      transform: scale(0.7);
+      transform-origin: center left;
+
+      svg {
+        .left { display: block; }
+
+        .right { display: none; }
+      }
     }
   }
 
@@ -37,10 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left: 0;
-    margin: 0 auto;
     position: relative;
-    right: 0;
 
     p {
       color: $brand-purple;
@@ -50,6 +59,48 @@
       margin-bottom: 40px;
       text-transform: uppercase;
       transform: rotate(-90deg);
+    }
+  }
+}
+
+@media #{$small} {
+  .app__navigation {
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 100%;
+
+    .app__nav {
+      .app__action__menu {
+        display: none;
+      }
+
+      .app__icon__menu {
+        align-items: center;
+        background-color: $brand-orange;
+        border-radius: 100px;
+        display: flex;
+        height: 45px;
+        justify-content: center;
+        transform: none;
+        width: 45px;
+
+        svg {
+          stroke: #ffffff;
+          transform: scale(0.65);
+          transform-origin: center center;
+
+          .left { display: none; }
+
+          .right { display: block; }
+        }
+      }
+    }
+
+    .app__scroll__message {
+      margin-bottom: 20px;
+      position: absolute;
+      right: 20px;
     }
   }
 }

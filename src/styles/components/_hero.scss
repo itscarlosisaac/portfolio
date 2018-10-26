@@ -1,8 +1,8 @@
 .app__hero {
-  background: #fbc056;
   display: flex;
   height: calc(100vh - 170px);
   min-height: 600px;
+  width: calc(100% - 120px);
 
   .app__hero__info {
     background: #fafafa;
@@ -17,6 +17,7 @@
       font-size: 20px;
       font-weight: 900;
       letter-spacing: 0.49px;
+      line-height: 28px;
       margin: 0;
     }
 
@@ -30,13 +31,26 @@
   }
 
   .app__hero__right {
+    background: #fbc056;
+    height: 100%;
     width: 50%;
   }
 }
 
-@media #{$medium} {
+@media #{$large} {
   .app__hero {
-    background: #fbc056;
+    .app__hero__info {
+      width: 70%;
+    }
+
+    .app__hero__right {
+      width: 30%;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .app__hero {
     display: flex;
     height: calc(100vh - 120px);
     min-height: 600px;
@@ -59,22 +73,26 @@
 
 @media #{$small} {
   .app__hero {
-    background: transparent;
     display: flex;
-    height: calc(100vh - 170px);
-    min-height: 600px;
+    flex-direction: column;
+    height: calc(100vh - 220px);
+    justify-content: center;
+    min-height: 400px;
+    width: 100%;
 
     .app__hero__info {
       background: transparent;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 20px;
       padding: 0;
       width: 80%;
     }
 
     .app__hero__right {
-      display: none;
+      height: 35%;
+      width: 100%;
     }
   }
 }
