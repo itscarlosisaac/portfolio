@@ -37,6 +37,7 @@
 			"declarations"
     ],
     "order/properties-alphabetical-order": true,
-    "images/broken": true
+    "images/broken": true,
+    "at-rule-no-unknown": [ true, { "ignoreAtRules":  ["function", "if", "each", "include", "mixin"] }]
   }
 }
