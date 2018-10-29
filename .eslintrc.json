@@ -12,6 +12,7 @@
       "no-console": "error",
       "curly": "error",
       "dot-location": ["error", "property"],
-      "no-restricted-modules": ["error", "jquery"]
+      "no-restricted-modules": ["error", "jquery"],
+      "class-methods-use-this": 0
     }
 }
