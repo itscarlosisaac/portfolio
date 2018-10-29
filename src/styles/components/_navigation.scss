@@ -11,7 +11,7 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
-    
+
     .app__action__menu {
       color: #000000;
       font-size: 11px;
@@ -19,6 +19,7 @@
       letter-spacing: 1.29px;
       order: 1;
       transform: rotate(-90deg);
+
       span {
         display: inline-block;
         transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);

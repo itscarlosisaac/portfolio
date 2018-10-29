@@ -8,11 +8,11 @@ import FooterSection from '../sections/FooterSection';
 
 export default () => (
   <Fragment>
-    <HeaderSection />
+    {/* <HeaderSection /> */}
     <SkillsSection />
-    <PortfolioSection title="Porfolio" />
+    {/* <PortfolioSection title="Porfolio" />
     <PersonalProjectsSection title="Personal Projects" />
     <CompaniesSection title="Companies I’ve collaborated with:" />
-    <FooterSection />
+    <FooterSection /> */}
   </Fragment>
 );

@@ -16,7 +16,13 @@ $extra-blue: #79d1ed !default;
 $extra-yellow: #fbc056 !default;
 
 /* Rectangle: */
-$brand-gradient: linear-gradient(-45deg, #f38498 0%, #e9916f 52%, #ffb14f 100%);
+@mixin brand-gradient() {
+  background: #f38498;
+  background: -moz-linear-gradient(45deg, #f38498 0%, #e9916f 50%, #ffb14f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f38498 0%, #e9916f 50%, #ffb14f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f38498 0%, #e9916f 50%, #ffb14f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f38498', endColorstr='#ffb14f', GradientType=1);
+}
 
 // -----------------------------------------------------------------------------
 // Media Breakpoints
