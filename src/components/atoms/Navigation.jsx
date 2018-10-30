@@ -23,7 +23,7 @@ class Navigation extends Component {
         </div>
         <div className="app__nav" onClick={this.toggleMenu}>
           <div className="app__icon__menu">
-            <MenuIcon />
+            <MenuIcon open={this.props.open} />
           </div>
 
           <div className="app__action__menu">

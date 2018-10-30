@@ -14,7 +14,6 @@ class HeaderSection extends Component {
   }
 
   toggleMenu() {
-    console.log("ASDASD")
     this.setState((prev) => {
       const menuOpen = !prev.menuOpen;
       return { menuOpen };
@@ -26,7 +25,7 @@ class HeaderSection extends Component {
       <div className="app__container">
         <section className="app__header">
           <Menu open={this.state.menuOpen} />
-          <Navigation toggleMenu={this.toggleMenu} />
+          <Navigation toggleMenu={this.toggleMenu} open={this.state.menuOpen} />
           <Hero />
         </section>
       </div>
