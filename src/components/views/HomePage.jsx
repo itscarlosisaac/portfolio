@@ -5,6 +5,7 @@ import PortfolioSection from '../sections/PortfolioSection';
 import PersonalProjectsSection from '../sections/PersonalProjectsSection';
 import CompaniesSection from '../sections/CompaniesSection';
 import FooterSection from '../sections/FooterSection';
+import ContactDialogBox from '../atoms/ContactDialogBox';
 
 export default () => (
   <Fragment>
@@ -14,5 +15,6 @@ export default () => (
     <PersonalProjectsSection title="Personal Projects" />
     <CompaniesSection title="Companies I’ve collaborated with:" />
     <FooterSection />
+    <ContactDialogBox />
   </Fragment>
 );

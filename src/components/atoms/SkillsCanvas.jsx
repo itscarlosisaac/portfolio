@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Skills from './Skills';
 import SkillsSVG from './SkillsSVG';
 
 class SkillsCanvas extends Component {
