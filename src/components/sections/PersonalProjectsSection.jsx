@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProjectItem from '../atoms/ProjectItem';
+import Data from '../../data/data';
 
 const PersonalProjectsSection = (props) => {
   const { title } = props;
+  const { projects } = Data;
   return (
     <section className="personal__projects__section">
       <header className="app__container">
         <h3 className="app__section__title app__section__title--projects">{title}</h3>
       </header>
       <div className="personal__projects">
-        <ProjectItem
-          type="yellow"
-          image="http://mattfarley.ca/img/mf-avatar.svg"
-          title="Catan Random Board Generator"
-          description="Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button."
-          link="http://bradfrost.com/blog/post/atomic-web-design/"
-        />
-        <ProjectItem
-          type="purple"
-          image="http://mattfarley.ca/img/mf-avatar.svg"
-          title="Catan Random Board Generator"
-          description="Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button."
-          link="http://bradfrost.com/blog/post/atomic-web-design/"
-        />
+        {
+          projects.map( (project) => {
+            return (
+              <ProjectItem
+                key={project.title}
+                type={project.type}
+                image="http://mattfarley.ca/img/mf-avatar.svg"
+                title={project.title}
+                description={project.description}
+                link={project.link}
+              />
+            );
+          })
+        }
       </div>
     </section>
   );

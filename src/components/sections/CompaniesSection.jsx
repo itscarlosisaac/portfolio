@@ -11,18 +11,18 @@ const CompaniesSection = (props) => {
       <div className="app__container">
         <h3 className="company__title">{title}</h3>
         <div className="app__companies">
-        {
-          companies.map( (company, i) => {
-            return (
-              <Company
-                key={i}
-                name={company.name}
-                imageUrl={company.imageUrl}
-                link={company.link}
-              />
-            )
-          })
-        }
+          {
+            companies.map((company) => {
+              return (
+                <Company
+                  key={company.name}
+                  name={company.name}
+                  imageUrl={company.imageUrl}
+                  link={company.link}
+                />
+              );
+            })
+          }
         </div>
       </div>
     </section>
