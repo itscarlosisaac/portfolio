@@ -3,16 +3,36 @@ import Hero from '../atoms/Hero';
 import Navigation from '../atoms/Navigation';
 import Menu from '../atoms/Menu';
 
-const HeaderSection = (props) =>  {
-  return (
-    <div className="app__container">
-      <section className="app__header">
-        <Menu />
-        <Navigation />
-        <Hero />
-      </section>
-    </div>
-  );
-};
+
+class HeaderSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen:  false,
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu() {
+    console.log("ASDASD")
+    this.setState((prev) => {
+      const menuOpen = !prev.menuOpen;
+      return { menuOpen };
+    });
+  }
+
+  render() {
+    return (
+      <div className="app__container">
+        <section className="app__header">
+          <Menu open={this.state.menuOpen} />
+          <Navigation toggleMenu={this.toggleMenu} />
+          <Hero />
+        </section>
+      </div>
+    )
+  }
+}
+
 
 export default HeaderSection;
