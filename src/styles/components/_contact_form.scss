@@ -1,10 +1,15 @@
 .app__contact {
   height: 100%;
+  display: none;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
+
+  &.open {
+    display: block;
+  }
 
   .app__overlay {
     background: #393c57;
@@ -65,9 +70,11 @@
         &.half {
           width: 48%;
         }
+
         &.full {
           width: 100%;
         }
+
         input {
           background: #fafafa;
           border: none;
@@ -80,6 +87,7 @@
           resize: none;
           width: 100%;
         }
+
         textarea {
           background: #fafafa;
           border: none;
@@ -97,7 +105,7 @@
         .app__form__submit {
           background: $extra-yellow;
           border-radius: 32px;
-          color: #855D17;
+          color: #855d17;
           display: inline-block;
           font-size: 16px;
           font-weight: bold;

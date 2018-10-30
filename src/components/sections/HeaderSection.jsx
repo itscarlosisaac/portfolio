@@ -8,7 +8,7 @@ class HeaderSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen:  false,
+      menuOpen: false,
     };
     this.toggleMenu = this.toggleMenu.bind(this);
   }

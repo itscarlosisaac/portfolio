@@ -5,7 +5,9 @@ import Copyright from '../atoms/Copyright';
 
 const FooterSection = (props) => {
   const bgSvg = '../../public/img/footer_wave.svg';
-
+  const toggleContactForm = () => {
+    props.toggleContactForm();
+  };
   return (
     <footer
       className="app__footer"
@@ -14,7 +16,7 @@ const FooterSection = (props) => {
       }}
     >
       <div className="app__container">
-        <ContactBox />
+        <ContactBox toggleContactForm={toggleContactForm} />
       </div>
       <Copyright />
     </footer>

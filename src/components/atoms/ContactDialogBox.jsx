@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import CloseSVG from './CloseSVG';
 
 class ContactDialogBox extends Component {
+  constructor(props) {
+    super(props);
+    this.closeContact = this.closeContact.bind(this);
+  }
+
+  closeContact() {
+    this.props.toggleContactForm();
+  }
+
   render() {
+    const openContact = this.props.openContact ? 'open' : 'closed';
     return (
-      <div className="app__contact">
+      <div className={`app__contact ${openContact}`}>
         <div className="app__dialog__box">
           <div className="app__close">
-            CLOSE
+            <CloseSVG closeContact={this.closeContact} />
           </div>
           <h3 className="app__dialog__title">
             Thanks for taking the time to reach out. What can I do for you today?
           </h3>
-          
           <div className="app__form">
             <div className="app__form__row">
               <div className="app__form__control half">
