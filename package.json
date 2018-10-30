@@ -11,9 +11,10 @@
     "npm": "6.3.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js",
-    "heroku-postbuild": "yarn run build"
+    "start": "node server/server.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "build:prod": "webpack --config webpack.config.prod.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.2",
@@ -60,6 +61,7 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
