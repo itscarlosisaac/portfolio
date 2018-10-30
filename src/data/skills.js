@@ -129,7 +129,7 @@ const Skills = {
     {
       skill: 'Terminal',
       exp: 3,
-      pos: { x: 40, y: 250 },
+      pos: { x: 45, y: 250 },
     },
   ],
 };

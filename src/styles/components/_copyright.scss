@@ -28,6 +28,12 @@
             margin-left: 0;
           }
         }
+
+        &:last-child {
+          img {
+            margin-right: 0;
+          }
+        }
       }
     }
 

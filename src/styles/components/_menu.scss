@@ -105,15 +105,16 @@
   }
 }
 
-@media #{$small} {
+@media #{$smallLand} {
   .app__menu {
     height: 100%;
     left: -20px;
     position: absolute;
+    transform: translate(-900px, 0);
     top: 0;
     width: calc(100% + 40px);
     z-index: 10;
-
+  
     &__social {
       left: 0;
       right: 0;
