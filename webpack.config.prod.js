@@ -18,7 +18,7 @@ module.exports = () => {
     { from: path.resolve(srcDir, 'public'), to: 'public' },
   ]);
 
-  const StyleLinter = new StyleLintPlugin();
+  // const StyleLinter = new StyleLintPlugin();
 
   const HTMLWebpackPlugin = new HtmlWebpackPlugin({
     meta: {
@@ -61,6 +61,11 @@ module.exports = () => {
       extensions: ['.js', '.jsx'],
     },
     devtool: 'source-map',
-    plugins: [CopyWebpack, MiniCSSExtract, HTMLWebpackPlugin, StyleLinter],
+    plugins: [
+      CopyWebpack,
+      MiniCSSExtract,
+      HTMLWebpackPlugin,
+      // StyleLinter,
+    ],
   };
 };
