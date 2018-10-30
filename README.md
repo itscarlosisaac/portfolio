@@ -59,6 +59,7 @@ It uses the [Airbnb Javascript guidelines](https://github.com/airbnb/javascript)
 
 
 ## TODO
+- Connect Form to Database
 - Add animations and loading states.
 - Connect to a real database.
 - Add Redux to manage states.
