@@ -37,4 +37,5 @@ $breakpoints: ( 'mobile': 375px, 'tablet': 768px, 'desktop': 1440px ) !default;
 $large: "all and (max-width: 1024px)";
 $medium: "all and (max-width: 800px)";
 $tablet: "all and (max-width: 768px)";
+$smallLand: "all and (max-width: 680px)";
 $small: "all and (max-width: 620px)";
