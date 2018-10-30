@@ -13,12 +13,12 @@
   "scripts": {
     "start": "node server/server.js",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "prestart": "eslint src/app.jsx",
+    "linter": "eslint src/app.jsx",
     "build:prod": "webpack --config webpack.config.prod.js",
     "heroku-postbuild": "yarn run build:prod"
   },
   "pre-commit": [
-    "prestart"
+    "linter"
   ],
   "devDependencies": {
     "autoprefixer": "^9.1.2",
