@@ -1,13 +1,14 @@
 {
-  "name": "webpack-boilerplate",
-  "description": "A webpack boilerplate for many web applications.",
+  "name": "personal-website",
+  "description": "Personal website",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Carlos Martinez <itscarlosisaac@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": "8.11.3",
-    "yarn": "1.7.0"
+    "yarn": "1.7.0",
+    "npm": "6.3.0"
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
