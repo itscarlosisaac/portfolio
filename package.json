@@ -11,7 +11,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "prestart": "eslint src/app.jsx"
+    "prestart": "eslint src/app.jsx",
+    "heroku-postbuild": "yarn run build"
   },
   "pre-commit": [
     "prestart"
