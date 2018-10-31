@@ -10,5 +10,7 @@ if (module.hot) {
   module.hot.accept();
 }
 
+import './data/Firebase';
+
 const root = document.getElementById('app');
 ReactDOM.render(<AppRouter />, root);

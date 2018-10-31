@@ -7,14 +7,6 @@ const concatSkills = [
   ...Skills.abilities,
 ];
 
-// Create skills canvas component
-function SkillsSVG(container) {
-  this.SVG = document.querySelector(container);
-  for (let i = 0; i < concatSkills.length; i++) {
-    new CreateSkill(concatSkills[i], this.SVG);
-  }
-}
-
 function scaleByYears(exp) {
   let scale;
   switch (exp) {
@@ -37,40 +29,40 @@ function scaleByYears(exp) {
   return scale;
 }
 
-function CreateHover(container, s, exp) {
-  const svgns = 'http://www.w3.org/2000/svg';
-  const rect = document.createElementNS(svgns, 'rect');
-  const g = document.createElementNS(svgns, 'g');
+// function CreateHover(container, s, exp) {
+//   const svgns = 'http://www.w3.org/2000/svg';
+//   const rect = document.createElementNS(svgns, 'rect');
+//   const g = document.createElementNS(svgns, 'g');
 
-  g.setAttribute('transform', 'translate(70, -35)');
-  rect.setAttributeNS(null, 'x', 0);
-  rect.setAttributeNS(null, 'y', 0);
-  rect.setAttributeNS(null, 'width', 150);
-  rect.setAttributeNS(null, 'height', 70);
-  rect.setAttributeNS(null, 'rx', 6);
-  rect.setAttributeNS(null, 'ry', 6);
-  rect.setAttributeNS(null, 'style', 'fill: #f3f3f3; ');
+//   g.setAttribute('transform', 'translate(70, -35)');
+//   rect.setAttributeNS(null, 'x', 0);
+//   rect.setAttributeNS(null, 'y', 0);
+//   rect.setAttributeNS(null, 'width', 150);
+//   rect.setAttributeNS(null, 'height', 70);
+//   rect.setAttributeNS(null, 'rx', 6);
+//   rect.setAttributeNS(null, 'ry', 6);
+//   rect.setAttributeNS(null, 'style', 'fill: #f3f3f3; ');
 
-  // Create Text
+//   // Create Text
 
-  const skill = document.createElementNS(svgns, 'text');
-  skill.setAttributeNS(null, 'x', 15);
-  skill.setAttributeNS(null, 'y', 30);
-  skill.setAttributeNS(null, 'style', 'font: bold 16px Lato; fill: #4D56A5; ');
-  skill.appendChild(document.createTextNode(s));
+//   const skill = document.createElementNS(svgns, 'text');
+//   skill.setAttributeNS(null, 'x', 15);
+//   skill.setAttributeNS(null, 'y', 30);
+//   skill.setAttributeNS(null, 'style', 'font: bold 16px Lato; fill: #4D56A5; ');
+//   skill.appendChild(document.createTextNode(s));
 
-  const years = document.createElementNS(svgns, 'text');
-  years.setAttributeNS(null, 'x', 15);
-  years.setAttributeNS(null, 'y', 50);
-  years.setAttributeNS(null, 'style', 'font: bold 12px Lato; fill: #171717; ');
-  years.appendChild(document.createTextNode(`${exp} Years of experience`));
+//   const years = document.createElementNS(svgns, 'text');
+//   years.setAttributeNS(null, 'x', 15);
+//   years.setAttributeNS(null, 'y', 50);
+//   years.setAttributeNS(null, 'style', 'font: bold 12px Lato; fill: #171717; ');
+//   years.appendChild(document.createTextNode(`${exp} Years of experience`));
 
-  g.setAttribute('id', 'app__skill__hover');
-  g.appendChild(rect);
-  g.appendChild(skill);
-  g.appendChild(years);
-  container.appendChild(g);
-}
+//   g.setAttribute('id', 'app__skill__hover');
+//   g.appendChild(rect);
+//   g.appendChild(skill);
+//   g.appendChild(years);
+//   container.appendChild(g);
+// }
 
 function CreateSkill(data, container) {
   this.svgns = 'http://www.w3.org/2000/svg';
@@ -98,7 +90,7 @@ function CreateSkill(data, container) {
 
   this.createGroup = () => {
     this.g = document.createElementNS(this.svgns, 'g');
-    let scale = scaleByYears(exp)
+    const scale = scaleByYears(exp);
     this.g.setAttribute('transform', `translate(${pos.x}, ${pos.y}), scale(${scale})`);
     this.g.appendChild(this.createCircle());
     this.g.appendChild(this.createText());
@@ -122,10 +114,18 @@ function CreateSkill(data, container) {
   this.createGroup();
 }
 
-const SVGHelper = {
-  setAttrNS: (e) => {
-    // e.setAttributeNS(null, )
-  },
-};
+// const SVGHelper = {
+//   setAttrNS: (e) => {
+//     // e.setAttributeNS(null, )
+//   },
+// };
+
+// Create skills canvas component
+function SkillsSVG(container) {
+  this.SVG = document.querySelector(container);
+  for (let i = 0; i < concatSkills.length; i++) {
+    new CreateSkill(concatSkills[i], this.SVG);
+  }
+}
 
 export default SkillsSVG;

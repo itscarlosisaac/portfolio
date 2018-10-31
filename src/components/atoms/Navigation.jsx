@@ -17,7 +17,7 @@ class Navigation extends Component {
     return (
       <div className="app__navigation">
         <div className="app__logo">
-          <a href="l">
+          <a href="/">
             <img width="50" src={logo} alt="Main Logo" />
           </a>
         </div>

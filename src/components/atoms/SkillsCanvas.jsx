@@ -1,10 +1,24 @@
 import React, { Component, Fragment } from 'react';
 import SkillsSVG from './SkillsSVG';
+import { getSkills } from '../../data/Firebase';
 
 class SkillsCanvas extends Component {
   constructor(props) {
     super(props);
     this.svg = React.createRef();
+    this.state = {
+      skills: [],
+      svg: '',
+    };
+  }
+
+  componentWillMount() {
+    getSkills.then((val) => {
+      this.setState(prev => ({
+        skills: prev.skills.concat(val),
+        svg: this.svg.current.id,
+      }));
+    });
   }
 
   componentDidMount() {
