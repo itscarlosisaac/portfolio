@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 import config from '../../firebase.config';
+import uid from 'uid';
 
 firebase.initializeApp(config);
 
@@ -33,3 +34,10 @@ export const getSkills = new Promise((resolve) => {
     resolve(snapshot.val());
   });
 });
+
+export const sendMessage = (name, email, message) => {
+  const id = uid();
+  db.ref(`messages/${id}`).set({
+    id, name, email, message,
+  });
+};

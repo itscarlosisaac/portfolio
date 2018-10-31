@@ -108,8 +108,10 @@
 
         .app__form__submit {
           background: $extra-yellow;
+          border: none;
           border-radius: 32px;
           color: #855d17;
+          cursor: pointer;
           display: inline-block;
           font-size: 16px;
           font-weight: bold;
@@ -118,6 +120,12 @@
           margin-top: 20px;
           text-align: center;
           width: 240px;
+
+          &:disabled {
+            background-color: #c0c0c0;
+            color: #868686;
+            cursor: not-allowed;
+          }
         }
       }
     }
