@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactBox = (props) => {
   const toggleContactForm = () => {
@@ -19,6 +20,10 @@ const ContactBox = (props) => {
       </div>
     </div>
   );
+};
+
+ContactBox.propTypes = {
+  toggleContactForm: PropTypes.func.isRequired,
 };
 
 export default ContactBox;

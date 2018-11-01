@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SocialIcons from './SocialIcons';
 
 class Menu extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -12,12 +12,14 @@ class Menu extends Component {
 
   scrollToAnchor(e) {
     e.preventDefault();
-    const f = e.target.dataset.ref;
-    this.props.scrollToAnchor(f);
+    const id = e.target.dataset.ref;
+    const { scrollToAnchor } = this.props;
+    scrollToAnchor(id);
   }
 
   render() {
-    const open = this.props.open ? 'open' : 'closed';
+    let { open } = this.props;
+    open = open ? 'open' : 'closed';
     return (
       <nav className={`app__menu ${open}`}>
         <ul>
@@ -31,6 +33,15 @@ class Menu extends Component {
       </nav>
     );
   }
+}
+
+Menu.propTypes = {
+  open: PropTypes.bool.isRequired,
+  scrollToAnchor: PropTypes.func.isRequired,
+};
+
+Menu.defaultProp = {
+  open: 'closed',
 };
 
 export default Menu;

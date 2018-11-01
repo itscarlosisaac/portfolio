@@ -5,12 +5,11 @@ import AppRouter from './app.router';
 // Importing Styles
 import 'normalize.css';
 import './styles/app.scss';
+import './data/Firebase';
 
 if (module.hot) {
   module.hot.accept();
 }
-
-import './data/Firebase';
 
 const root = document.getElementById('app');
 ReactDOM.render(<AppRouter />, root);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const PortfolioItem = (props) => {
@@ -31,7 +31,7 @@ const PortfolioItem = (props) => {
           View Site
         </a>
       </div>
-      <div className="portfolio__item__hover"></div>
+      <div className="portfolio__item__hover" />
     </div>
   );
 };

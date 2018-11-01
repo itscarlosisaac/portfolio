@@ -25,7 +25,7 @@ class HomePage extends Component {
   }
 
   scrollToAnchor(hash) {
-    const options = { behavior: "smooth", inline: "nearest"}
+    const options = { behavior: 'smooth', inline: 'nearest' };
     document.querySelector(`#${hash}`).scrollIntoView(options);
   }
 
