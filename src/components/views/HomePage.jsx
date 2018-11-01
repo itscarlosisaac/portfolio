@@ -39,7 +39,11 @@ class HomePage extends Component {
         <PersonalProjectsSection title="Personal Projects" />
         <CompaniesSection title="Companies I’ve collaborated with:" />
         <FooterSection toggleContactForm={this.toggleContactForm} />
-        <ContactDialogBox openContact={openContact} toggleContactForm={this.toggleContactForm} />
+        { openContact && (
+          <ContactDialogBox
+            openContact={openContact}
+            toggleContactForm={this.toggleContactForm}
+          />) }
       </Fragment>
     );
   }
