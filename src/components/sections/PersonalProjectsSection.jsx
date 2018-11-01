@@ -32,7 +32,7 @@ class PersonalProjectsSection extends Component {
                 <ProjectItem
                   key={project.title}
                   type={project.type}
-                  image="http://mattfarley.ca/img/mf-avatar.svg"
+                  image={project.thumbnailUrl}
                   title={project.title}
                   description={project.description}
                   link={project.link}
