@@ -81,7 +81,7 @@ class ContactDialogBox extends Component {
             </div>
           </form>
         </div>
-        <div className="app__overlay"></div>
+        <div className="app__overlay" onClick={this.closeContact}></div>
       </div>
     )
   }

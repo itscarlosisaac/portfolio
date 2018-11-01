@@ -3,7 +3,7 @@ import SkillsCanvas from '../atoms/SkillsCanvas';
 
 const SkillsSection = (props) =>  {
   return (
-    <div className="app__skills">
+    <div className="app__skills" id="skills">
       <div className="app__container">
         <SkillsCanvas />
       </div>

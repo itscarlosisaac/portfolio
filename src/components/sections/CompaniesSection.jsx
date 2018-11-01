@@ -21,7 +21,7 @@ class CompaniesSection extends Component {
     const { title } = this.props;
     const { companies } = this.state;
     return (
-      <section className="company__section">
+      <section className="company__section" id="companies">
         <div className="app__container">
           <h3 className="company__title">{title}</h3>
           <div className="app__companies">

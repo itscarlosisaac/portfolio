@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ContactBox = (props) => {
-
   const toggleContactForm = () => {
     props.toggleContactForm();
   };

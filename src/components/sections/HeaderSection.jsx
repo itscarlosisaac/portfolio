@@ -11,6 +11,7 @@ class HeaderSection extends Component {
       menuOpen: false,
     };
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.scrollToAnchor = this.scrollToAnchor.bind(this);
   }
 
   toggleMenu() {
@@ -20,11 +21,16 @@ class HeaderSection extends Component {
     });
   }
 
+  scrollToAnchor(ref) {
+    this.toggleMenu();
+    this.props.scrollToAnchor(ref);
+  }
+
   render() {
     return (
       <div className="app__container">
         <section className="app__header">
-          <Menu open={this.state.menuOpen} />
+          <Menu scrollToAnchor={this.scrollToAnchor} open={this.state.menuOpen} />
           <Navigation toggleMenu={this.toggleMenu} open={this.state.menuOpen} />
           <Hero />
         </section>

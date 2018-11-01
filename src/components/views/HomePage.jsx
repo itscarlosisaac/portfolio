@@ -7,14 +7,14 @@ import CompaniesSection from '../sections/CompaniesSection';
 import FooterSection from '../sections/FooterSection';
 import ContactDialogBox from '../atoms/ContactDialogBox';
 
-
 class HomePage extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       openContact: false,
     };
     this.toggleContactForm = this.toggleContactForm.bind(this);
+    this.scrollToAnchor = this.scrollToAnchor.bind(this);
   }
 
   toggleContactForm() {
@@ -24,11 +24,16 @@ class HomePage extends Component {
     });
   }
 
+  scrollToAnchor(hash) {
+    const options = { behavior: "smooth", inline: "nearest"}
+    document.querySelector(`#${hash}`).scrollIntoView(options);
+  }
+
   render() {
     const { openContact } = this.state;
     return (
       <Fragment>
-        <HeaderSection />
+        <HeaderSection scrollToAnchor={this.scrollToAnchor} />
         <SkillsSection />
         <PortfolioSection title="Porfolio" />
         <PersonalProjectsSection title="Personal Projects" />
@@ -36,7 +41,7 @@ class HomePage extends Component {
         <FooterSection toggleContactForm={this.toggleContactForm} />
         <ContactDialogBox openContact={openContact} toggleContactForm={this.toggleContactForm} />
       </Fragment>
-    )
+    );
   }
 }
 

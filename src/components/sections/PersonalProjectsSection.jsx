@@ -21,7 +21,7 @@ class PersonalProjectsSection extends Component {
     const { title } = this.props;
     const { projects } = this.state;
     return (
-      <section className="personal__projects__section">
+      <section className="personal__projects__section" id="projects">
         <header className="app__container">
           <h3 className="app__section__title app__section__title--projects">{title}</h3>
         </header>

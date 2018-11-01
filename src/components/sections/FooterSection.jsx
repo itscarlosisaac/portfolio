@@ -11,6 +11,7 @@ const FooterSection = (props) => {
   return (
     <footer
       className="app__footer"
+      id="footer"
       style={{
         backgroundImage: `url(${bgSvg})`,
       }}

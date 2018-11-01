@@ -21,7 +21,7 @@ class PortfolioSection extends Component {
     const { title } = this.props;
     const { portfolios } = this.state;
     return (
-      <section className="app__container">
+      <section className="app__container" id="portfolio">
         <header>
           <h3 className="app__section__title app__section__title--portfolio">{title}</h3>
         </header>
