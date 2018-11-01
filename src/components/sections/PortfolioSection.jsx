@@ -33,7 +33,7 @@ class PortfolioSection extends Component {
                   key={portfolio.company}
                   color={portfolio.color}
                   type={portfolio.type}
-                  image="http://mattfarley.ca/img/project-userforge.png"
+                  image={portfolio.thumbnail}
                   company={portfolio.company}
                   description={portfolio.description}
                   link={portfolio.link}
