@@ -20,6 +20,7 @@ class PersonalProjectsSection extends Component {
   render() {
     const { title } = this.props;
     const { projects } = this.state;
+    console.log(projects)
     return (
       <section className="personal__projects__section" id="projects">
         <header className="app__container">
