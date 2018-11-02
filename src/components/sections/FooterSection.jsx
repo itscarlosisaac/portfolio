@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ContactBox from '../atoms/ContactBox';
 import Copyright from '../atoms/Copyright';
 
@@ -22,6 +23,10 @@ const FooterSection = (props) => {
       <Copyright />
     </footer>
   );
+};
+
+FooterSection.propTypes = {
+  toggleContactForm: PropTypes.func.isRequired,
 };
 
 export default FooterSection;

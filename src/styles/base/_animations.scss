@@ -3,3 +3,39 @@
 
   100% { bottom: 0; }
 }
+
+.contact-enter {
+  opacity: 0.01;
+
+  .app__dialog__box {
+    transform: translate(0, -100px);
+  }
+}
+
+.contact-leave {
+  opacity: 1;
+
+  .app__dialog__box {
+    transform: translate(0, 0);
+  }
+}
+
+.contact-enter.contact-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+
+  .app__dialog__box {
+    transform: translate(0, 0);
+    transition: all 0.4s ease-in;
+  }
+}
+
+.contact-leave.contact-leave-active {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+
+  .app__dialog__box {
+    transform: translate(0, -100px);
+    transition: all 0.4s ease-in;
+  }
+}

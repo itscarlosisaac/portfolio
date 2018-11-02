@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import HeaderSection from '../sections/HeaderSection';
 import SkillsSection from '../sections/SkillsSection';
 import PortfolioSection from '../sections/PortfolioSection';
@@ -31,19 +32,28 @@ class HomePage extends Component {
 
   render() {
     const { openContact } = this.state;
+    const shrinked = openContact ? 'shrinked' : 'base';
     return (
       <Fragment>
-        <HeaderSection scrollToAnchor={this.scrollToAnchor} />
-        <SkillsSection />
-        <PortfolioSection title="Porfolio" />
-        <PersonalProjectsSection title="Personal Projects" />
-        <CompaniesSection title="Companies I’ve collaborated with:" />
-        <FooterSection toggleContactForm={this.toggleContactForm} />
-        { openContact && (
-          <ContactDialogBox
-            openContact={openContact}
-            toggleContactForm={this.toggleContactForm}
-          />) }
+        <div className={'page__wrapper ' + shrinked}>
+          <HeaderSection scrollToAnchor={this.scrollToAnchor} />
+          <SkillsSection />
+          <PortfolioSection title="Porfolio" />
+          <PersonalProjectsSection title="Personal Projects" />
+          <CompaniesSection title="Companies I’ve collaborated with:" />
+          <FooterSection toggleContactForm={this.toggleContactForm} />
+        </div>
+        <ReactCSSTransitionGroup
+          transitionName="contact"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          { openContact && (
+            <ContactDialogBox
+              openContact={openContact}
+              toggleContactForm={this.toggleContactForm}
+            />) }
+        </ReactCSSTransitionGroup>
       </Fragment>
     );
   }
