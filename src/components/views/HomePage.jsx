@@ -18,6 +18,16 @@ class HomePage extends Component {
     this.scrollToAnchor = this.scrollToAnchor.bind(this);
   }
 
+  componentWillUpdate() {
+    const { openContact } = this.state;
+    const bodyDOM = document.querySelector('body');
+    if (!openContact) {
+      bodyDOM.className = 'no--scroll';
+    } else {
+      bodyDOM.className = '';
+    }
+  }
+
   toggleContactForm() {
     this.setState((prev) => {
       const openContact = !prev.openContact;
@@ -35,7 +45,7 @@ class HomePage extends Component {
     const shrinked = openContact ? 'shrinked' : 'base';
     return (
       <Fragment>
-        <div className={'page__wrapper ' + shrinked}>
+        <div className={`page__wrapper ${shrinked}`}>
           <HeaderSection scrollToAnchor={this.scrollToAnchor} />
           <SkillsSection />
           <PortfolioSection title="Porfolio" />

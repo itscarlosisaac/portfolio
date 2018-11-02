@@ -13,6 +13,11 @@
   transition: 0.5s ease all;
 
   &.shrinked {
+    overflow: hidden;
     transform: scale(0.9);
   }
+}
+
+.no--scroll {
+  overflow: hidden;
 }
