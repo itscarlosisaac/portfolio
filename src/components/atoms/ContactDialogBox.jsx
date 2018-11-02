@@ -53,12 +53,15 @@ class ContactDialogBox extends Component {
     } = this.state;
     if (formValid) {
       sendMessage(name, email, message);
+      const { checkSentMessage } = this.props;
+      checkSentMessage(true);
       this.closeContact();
       this.setState(() => ({
         name: '',
         email: '',
         message: '',
         isValidated: false,
+        messageSent: true,
       }));
     }
   }
@@ -115,6 +118,7 @@ class ContactDialogBox extends Component {
 ContactDialogBox.propTypes = {
   toggleContactForm: PropTypes.func.isRequired,
   openContact: PropTypes.bool.isRequired,
+  checkSentMessage: PropTypes.func.isRequired,
 };
 
 export default ContactDialogBox;

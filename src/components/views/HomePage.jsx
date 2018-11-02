@@ -8,6 +8,7 @@ import PersonalProjectsSection from '../sections/PersonalProjectsSection';
 import CompaniesSection from '../sections/CompaniesSection';
 import FooterSection from '../sections/FooterSection';
 import ContactDialogBox from '../atoms/ContactDialogBox';
+import SendMessageDialogBox from '../atoms/SendMessageDialogBox';
 
 class HomePage extends Component {
   constructor(props) {
@@ -15,22 +16,24 @@ class HomePage extends Component {
     this.state = {
       openContact: false,
       loaded: false,
+      messageSent: false,
     };
     this.toggleContactForm = this.toggleContactForm.bind(this);
+    this.checkSentMessage = this.checkSentMessage.bind(this);
     this.scrollToAnchor = this.scrollToAnchor.bind(this);
   }
 
-  componentDidMount(){
-    setTimeout( () => {
-      this.setState( () => ({ loaded: true }));
-    }, 3000 )
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState(() => ({ loaded: true }));
+    }, 2500);
   }
 
   componentWillUpdate() {
-    const { openContact, loaded } = this.state;
+    const { openContact, loaded, messageSent } = this.state;
     const bodyDOM = document.querySelector('body');
     if (!openContact && loaded) {
-      bodyDOM.className = 'no--scroll';
+      if (!messageSent) bodyDOM.className = 'no--scroll';
     } else {
       bodyDOM.className = '';
     }
@@ -43,13 +46,21 @@ class HomePage extends Component {
     });
   }
 
+  checkSentMessage(value) {
+    setTimeout(() => {
+      this.setState(() => ({ messageSent: false }));
+    }, 2500);
+
+    this.setState(() => ({ messageSent: value }));
+  }
+
   scrollToAnchor(hash) {
     const options = { behavior: 'smooth', inline: 'nearest' };
     document.querySelector(`#${hash}`).scrollIntoView(options);
   }
 
   render() {
-    const { openContact, loaded } = this.state;
+    const { openContact, loaded, messageSent } = this.state;
     const shrinked = openContact ? 'shrinked' : 'base';
     return (
       <Fragment>
@@ -61,14 +72,17 @@ class HomePage extends Component {
           { !loaded && <LoadingScreen /> }
         </ReactCSSTransitionGroup>
         {
-          loaded && <div className={`page__wrapper ${shrinked}`}>
-                      <HeaderSection scrollToAnchor={this.scrollToAnchor} />
-                      <SkillsSection />
-                      <PortfolioSection title="Porfolio" />
-                      <PersonalProjectsSection title="Personal Projects" />
-                      <CompaniesSection title="Companies I’ve collaborated with:" />
-                      <FooterSection toggleContactForm={this.toggleContactForm} />
-                    </div>
+          loaded
+          && (
+            <div className={`page__wrapper ${shrinked}`}>
+              <HeaderSection scrollToAnchor={this.scrollToAnchor} />
+              <SkillsSection />
+              <PortfolioSection title="Porfolio" />
+              <PersonalProjectsSection title="Personal Projects" />
+              <CompaniesSection title="Companies I’ve collaborated with:" />
+              <FooterSection toggleContactForm={this.toggleContactForm} />
+            </div>
+          )
         }
         <ReactCSSTransitionGroup
           transitionName="contact"
@@ -79,7 +93,15 @@ class HomePage extends Component {
             <ContactDialogBox
               openContact={openContact}
               toggleContactForm={this.toggleContactForm}
+              checkSentMessage={this.checkSentMessage}
             />) }
+        </ReactCSSTransitionGroup>
+        <ReactCSSTransitionGroup
+          transitionName="thanks"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          { messageSent && <SendMessageDialogBox /> }
         </ReactCSSTransitionGroup>
       </Fragment>
     );
