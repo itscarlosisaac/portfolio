@@ -1,0 +1,46 @@
+.app__loading {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 999999;
+
+  .app__loading__bg {
+    background-color: #fbc056;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .loading__logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index:100;
+
+    .outer {
+      transform-origin: center center;
+      animation: rotation 6s infinite;
+      animation-timing-function: cubic-bezier(.78,-0.62,.73,2.33)
+    }
+
+    &:hover {
+      .outline {
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+@keyframes rotation {
+  0% { transform: rotateZ(0deg) scale(0.95) }
+  50% { transform: rotateZ(180deg) scale(0.95)}
+  100% { transform: rotateZ(360deg) scale(0.95) }
+}

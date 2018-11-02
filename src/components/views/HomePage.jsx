@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import LoadingScreen from '../sections/LoadingScreen';
 import HeaderSection from '../sections/HeaderSection';
 import SkillsSection from '../sections/SkillsSection';
 import PortfolioSection from '../sections/PortfolioSection';
@@ -13,15 +14,22 @@ class HomePage extends Component {
     super(props);
     this.state = {
       openContact: false,
+      loaded: false,
     };
     this.toggleContactForm = this.toggleContactForm.bind(this);
     this.scrollToAnchor = this.scrollToAnchor.bind(this);
   }
 
+  componentDidMount(){
+    setTimeout( () => {
+      this.setState( () => ({ loaded: true }));
+    }, 3000 )
+  }
+
   componentWillUpdate() {
-    const { openContact } = this.state;
+    const { openContact, loaded } = this.state;
     const bodyDOM = document.querySelector('body');
-    if (!openContact) {
+    if (!openContact && loaded) {
       bodyDOM.className = 'no--scroll';
     } else {
       bodyDOM.className = '';
@@ -41,18 +49,27 @@ class HomePage extends Component {
   }
 
   render() {
-    const { openContact } = this.state;
+    const { openContact, loaded } = this.state;
     const shrinked = openContact ? 'shrinked' : 'base';
     return (
       <Fragment>
-        <div className={`page__wrapper ${shrinked}`}>
-          <HeaderSection scrollToAnchor={this.scrollToAnchor} />
-          <SkillsSection />
-          <PortfolioSection title="Porfolio" />
-          <PersonalProjectsSection title="Personal Projects" />
-          <CompaniesSection title="Companies I’ve collaborated with:" />
-          <FooterSection toggleContactForm={this.toggleContactForm} />
-        </div>
+        <ReactCSSTransitionGroup
+          transitionName="loading"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          { !loaded && <LoadingScreen /> }
+        </ReactCSSTransitionGroup>
+        {
+          loaded && <div className={`page__wrapper ${shrinked}`}>
+                      <HeaderSection scrollToAnchor={this.scrollToAnchor} />
+                      <SkillsSection />
+                      <PortfolioSection title="Porfolio" />
+                      <PersonalProjectsSection title="Personal Projects" />
+                      <CompaniesSection title="Companies I’ve collaborated with:" />
+                      <FooterSection toggleContactForm={this.toggleContactForm} />
+                    </div>
+        }
         <ReactCSSTransitionGroup
           transitionName="contact"
           transitionEnterTimeout={500}
