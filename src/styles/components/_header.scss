@@ -4,6 +4,11 @@
   position: relative;
 }
 
+.app__scroll__message img {
+  max-width: 20%;
+  margin: 0 auto;
+}
+
 @media #{$large} {
   .app__header {
     padding: 85px 45px;
